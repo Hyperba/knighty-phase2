@@ -1,0 +1,23 @@
+This is the long term plan of this site to take it from simple landing site to an entire replacement for Knighty's patreon page. Right now it is just a landing page with a portfolio of builds and a contact form with an about page and a link that leads to the patreon.
+
+Knighty's patreon page has 17k members but he wants a replacement because patreon takes a lot of fees. Right now he uses instagram from marketing and to get users to join his patreon. Right now, he posts builds on instgram so that he could incentivise people to join his patreon where he has lots of minecraft builds and depending on your tier on patreon, you unlock the corresponding builds.
+
+The long term plan is to completely get rid of patreon from the flow so that users can visit this site and they can subsscribe here instead using stipe api, paypal api, etc and supabase tracks the users. All the builds will be moved here and from now on users can sign up to this site instead for a free account, and then they can upgrade and become a next tier member so that they can unlock the corresponding builds.
+
+There will be a builds page that is publically available for guests and members. It will have a search bar and filter system, and there will be a my-builds page for members only to see their unlocked builds, so that if they are a tier 2 member, they can see all the tier 2 builds and below, and if they are a tier 3 member, they can see all the tier 3 builds and below, and so on. That way, users can download the builds they already unlocked and they need to upgrade to unlock the next tier builds unless they are the final tier where they unlock everything and have full access to all the builds.
+
+The goal is to have this site be a replacement for Knighty's patreon page and to have it be a one stop shop for all the builds and to have it be a place where users can come to download the builds they want to unlock and to have it be a place where users can come to support Knighty and his work.
+
+And no more patreon fees or limitations anymore. All members will be stored with supabase and authenticaiton will be handled with supabase. There will be three types of members, tier 0 (free), tier 1 (basic), tier 2 (premium), tier 3 (ultimate), admin (owner, knighty himself). Admin users are the ones that can add new builds, edit existing builds, delete builds, etc. Default users are tier 0. That is their type.
+
+Every user has a:
+- display name
+- @handle
+- type (tier 0-3, or admin)
+- bio
+- profile picture URL
+- cover picture URL
+
+Because we will also have a profile page as well, knightybuilds.com/@handle, where users can see their profile and their reviews for builds, etc
+
+Every build will have strictly one image, a title, description, and a download link for a zip file of the build, and an embed_url for a 3d live preview of the build like a model. Other than the description we will need to store some simple stats like likes. 

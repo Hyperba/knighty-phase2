@@ -1,0 +1,32 @@
+{
+  "name": "knighty-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "@paypal/react-paypal-js": "^8.9.2",
+    "@react-email/render": "^2.0.2",
+    "@studio-freight/lenis": "^1.0.42",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.90.1",
+    "lucide-react": "^0.562.0",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "resend": "^6.7.0",
+    "three.js": "^0.77.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
