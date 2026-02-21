@@ -1,0 +1,22 @@
+.authLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.authHeader {
+  padding: 1.5rem 2rem;
+}
+
+.authLogo img {
+  height: 40px;
+  width: auto;
+}
+
+.authMain {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}

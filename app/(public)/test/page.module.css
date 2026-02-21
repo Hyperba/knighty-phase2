@@ -1,0 +1,220 @@
+.container {
+  min-height: 100vh;
+  padding: var(--nav-padding) 2rem 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.75rem;
+  color: var(--heading-color);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.cardIcon {
+  color: #8b5cf6;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.statusOk {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.statusError {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.statusWarn {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.statusLoading {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  gap: 1rem;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.rowLabel {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  white-space: nowrap;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.rowValue {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  word-break: break-all;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+.rowValueNull {
+  font-size: 0.8rem;
+  word-break: break-all;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+  color: rgba(255, 255, 255, 0.2);
+  font-style: italic;
+}
+
+.refreshBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1.5rem;
+}
+
+.refreshBtn:hover {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.refreshBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.timestamp {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.25);
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dotGreen {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #22c55e;
+}
+
+.dotRed {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #ef4444;
+}
+
+.dotYellow {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #f59e0b;
+}
+
+.dotPurple {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #a78bfa;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: var(--nav-padding) 1rem 3rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .rowValue {
+    text-align: left;
+  }
+
+  .rowLabel {
+    min-width: unset;
+  }
+}

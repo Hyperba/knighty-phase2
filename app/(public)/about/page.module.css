@@ -1,0 +1,504 @@
+.about {
+    min-height: 100vh;
+    width: 100%;
+    padding: var(--page-padding);
+    padding-top: var(--nav-padding);
+}
+
+.heroSection {
+    padding: clamp(3rem, 8vh, 5rem) 0 clamp(2.5rem, 6vh, 4rem);
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.eyebrow {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.minecraftSection {
+    padding: clamp(3rem, 6vh, 5rem) 0;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.minecraftContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2.5rem, 5vw, 4rem);
+    align-items: center;
+}
+
+.minecraftText {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sectionTitle {
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    font-weight: 700;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.minecraftDescription {
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.4;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.statCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+.statValue {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0;
+}
+
+.minecraftImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.minecraftImage:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.minecraftImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+.storySection {
+    padding: clamp(4rem, 8vh, 6rem) 0;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.storyContent {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(2.5rem, 5vw, 3rem);
+    align-items: start;
+}
+
+.storyImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: sticky;
+    top: 2rem;
+}
+
+.storyImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+.storyImage:hover img {
+    transform: scale(1.05);
+}
+
+.storyTimeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.timelineList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.timelineItem {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+    position: relative;
+    animation: fadeInLeft 0.6s ease-out backwards;
+}
+
+.timelineItem:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.timelineItem:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.timelineItem:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.timelineItem:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.timelineItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 3rem;
+    bottom: -2.5rem;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
+}
+
+.timelineYear {
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0;
+    text-align: center;
+}
+
+.timelineContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.timelineTitle {
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: 0;
+}
+
+.timelineDescription {
+    font-size: clamp(0.85rem, 1.2vw, 0.9rem);
+    color: var(--text-color);
+    margin: 0;
+}
+
+.whySection {
+    padding: clamp(4rem, 8vh, 6rem) 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.featureCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 480px;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.featureCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.6) 40%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    z-index: 1;
+    transition: opacity 0.4s ease;
+}
+
+.featureCard:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.featureCard:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.featureCard:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.featureCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.featureCard:hover::before {
+    opacity: 0.75;
+}
+
+.featureContent {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 2rem;
+}
+
+.featureTitle {
+    font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.featureDescription {
+    font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .minecraftContent {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .minecraftImage {
+        order: -1;
+    }
+
+    .storyContent {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .storyImage {
+        position: relative;
+        min-height: 400px;
+    }
+
+    .featureGrid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .timelineItem {
+        grid-template-columns: 80px 1fr;
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .timelineItem:not(:last-child)::after {
+        left: 40px;
+        top: 2.5rem;
+        bottom: -2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding-bottom: 3rem;
+    }
+
+    .heroSection {
+        padding: clamp(2.5rem, 6vh, 3.5rem) 0 clamp(2rem, 5vh, 3rem);
+    }
+
+    .minecraftSection {
+        padding: 2.5rem 0;
+    }
+
+    .minecraftText {
+        gap: 1.75rem;
+    }
+
+    .minecraftImage {
+        min-height: 350px;
+    }
+
+    .storySection {
+        padding: 3rem 0;
+    }
+
+    .storyImage {
+        min-height: 350px;
+    }
+
+    .storyTimeline {
+        gap: 2rem;
+    }
+
+    .timelineList {
+        gap: 2rem;
+    }
+
+    .whySection {
+        padding: 3rem 0 0;
+        gap: 2.5rem;
+    }
+
+    .featureCard {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 520px) {
+    .about {
+        padding-bottom: 2.5rem;
+    }
+
+    .heroSection {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .minecraftSection {
+        padding: 2rem 0;
+    }
+
+    .minecraftText {
+        gap: 1.5rem;
+    }
+
+    .minecraftImage {
+        min-height: 300px;
+        border-radius: 1.25rem;
+    }
+
+    .minecraftImage img {
+        border-radius: 1.25rem;
+    }
+
+    .storySection {
+        padding: 2.5rem 0;
+    }
+
+    .storyImage {
+        min-height: 300px;
+        border-radius: 1.25rem;
+    }
+
+    .storyImage img {
+        border-radius: 1.25rem;
+    }
+
+    .timelineItem {
+        grid-template-columns: 70px 1fr;
+        gap: 1.25rem;
+        padding-bottom: 1.75rem;
+    }
+
+    .timelineItem:not(:last-child)::after {
+        left: 35px;
+        top: 2.25rem;
+        bottom: -1.75rem;
+    }
+
+    .timelineList {
+        gap: 1.75rem;
+    }
+
+    .whySection {
+        padding: 2.5rem 0 0;
+        gap: 2rem;
+    }
+
+    .featureCard {
+        min-height: 340px;
+        border-radius: 1.25rem;
+    }
+
+    .featureContent {
+        padding: 1.5rem;
+    }
+}

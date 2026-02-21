@@ -1,0 +1,636 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.dateRange {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rangeBtn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--admin-card-border);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.rangeBtn:hover {
+  background: var(--admin-card-bg);
+}
+
+.rangeBtn.active {
+  background: var(--admin-accent);
+  border-color: var(--admin-accent);
+  color: #fff;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-card-border);
+  border-radius: 0.75rem;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.chartCard {
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-card-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.chartCard.full {
+  grid-column: 1 / -1;
+}
+
+.chartTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+.chartPlaceholder {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.sourcesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sourceItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sourceName {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--heading-color);
+  text-transform: capitalize;
+}
+
+.sourceBar {
+  flex: 2;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sourceBarFill {
+  height: 100%;
+  background: var(--admin-accent);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.sourceValue {
+  width: 60px;
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.topPagesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pageItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 0;
+  border-bottom: 1px solid var(--admin-card-border);
+}
+
+.pageItem:last-child {
+  border-bottom: none;
+}
+
+.pagePath {
+  font-size: 0.85rem;
+  color: var(--heading-color);
+  font-family: monospace;
+}
+
+.pageViews {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--admin-accent);
+}
+
+/* ─── Tier Breakdown ─────────────────────────── */
+
+.tierGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tierItem {
+  display: grid;
+  grid-template-columns: 160px 1fr 50px;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tierItemHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tierDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tierLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+.tierCount {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-left: auto;
+}
+
+.tierBar {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tierBarFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  min-width: 2px;
+}
+
+.tierPct {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.6;
+  text-align: right;
+}
+
+.emptyState {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.loading {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+/* ─── Bar Chart ─────────────────────────────── */
+
+.barChart {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.barChartBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 200px;
+  min-width: fit-content;
+  padding-bottom: 1.5rem;
+}
+
+.barCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  min-width: 32px;
+  height: 100%;
+  position: relative;
+  cursor: default;
+}
+
+.barValue {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.6;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.bar {
+  width: 100%;
+  max-width: 40px;
+  background: var(--admin-accent);
+  border-radius: 3px 3px 0 0;
+  transition: height 0.3s ease;
+  min-height: 2px;
+}
+
+.barCol:hover .bar {
+  opacity: 0.8;
+}
+
+.barLabel {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.6rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  white-space: nowrap;
+  transform: rotate(-30deg);
+  transform-origin: top center;
+}
+
+/* ─── Build Analytics ──────────────────────────── */
+
+.buildSearchWrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.buildSearchBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--admin-card-border);
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease;
+}
+
+.buildSearchBar:focus-within {
+  border-color: var(--admin-accent);
+}
+
+.buildSearchIcon {
+  color: var(--text-color);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.buildSearchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--heading-color);
+  font-size: 0.875rem;
+  font-family: var(--font-outfit);
+}
+
+.buildSearchInput::placeholder {
+  color: var(--text-color);
+  opacity: 0.4;
+}
+
+.buildSearchClear {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.buildSearchClear:hover {
+  opacity: 1;
+}
+
+.buildSearchDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-card-border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  z-index: 20;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.buildSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.625rem 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--admin-card-border);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+  color: var(--heading-color);
+}
+
+.buildSearchItem:last-child {
+  border-bottom: none;
+}
+
+.buildSearchItem:hover {
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.buildSearchThumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 0.375rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.buildSearchThumbPlaceholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 0.375rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(99, 102, 241, 0.1));
+  flex-shrink: 0;
+}
+
+.buildSearchItemInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.buildSearchItemTitle {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--heading-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buildSearchItemSlug {
+  font-size: 0.7rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-family: monospace;
+}
+
+.buildSearchItemTier {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+
+.buildSearchHint {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  padding: 0.5rem 0;
+}
+
+/* ─── Build Analytics Result ──────────────────── */
+
+.buildAnalyticsResult {
+  margin-top: 0.5rem;
+}
+
+.buildAnalyticsHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--admin-card-border);
+}
+
+.buildAnalyticsImage {
+  width: 56px;
+  height: 56px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.buildAnalyticsImagePlaceholder {
+  width: 56px;
+  height: 56px;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(99, 102, 241, 0.1));
+  flex-shrink: 0;
+}
+
+.buildAnalyticsName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 0;
+}
+
+.buildAnalyticsSlug {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-family: monospace;
+}
+
+.buildAnalyticsClose {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--admin-card-border);
+  border-radius: 0.375rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.375rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+
+.buildAnalyticsClose:hover {
+  border-color: #f87171;
+  color: #f87171;
+}
+
+.buildStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.buildStatCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--admin-card-border);
+  border-radius: 0.625rem;
+}
+
+.buildStatIcon {
+  color: var(--admin-accent);
+}
+
+.buildStatValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.buildStatLabel {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.buildViewsChart {
+  margin-top: 0.5rem;
+}
+
+.buildViewsChartTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 0 0 0.75rem;
+}
+
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chartsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .buildStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dateRange {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .buildStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .buildStatsGrid {
+    grid-template-columns: 1fr;
+  }
+}
