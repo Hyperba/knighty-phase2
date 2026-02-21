@@ -1,0 +1,12 @@
+.navbarWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.navbarWrapper > * {
+    pointer-events: auto;
+}

@@ -1,0 +1,58 @@
+export const projects = [
+    {
+        id: 1,
+        name: "The Explorer",
+        description: "This masterfully crafted piece encompasses the memories that, piece by piece, build up a worthwhile adventurous life. The veteran traveler conveys a strong sense of not only wisdom but bravery, standing as a center of confidence and experience. From the depths of the mines to the heights of the skies, his story flows through every little detail of the build, coming together and graciously unfolding before the beholder. The realism of the complete artwork showcases the sheer precision and skill by the artist.",
+        buildTime: "80H",
+        size: "201x259x201",
+        year: "2024",
+        imageSrc: "/projects/the-explorer.png",
+        srcAlt: "Project",
+        comparison: false,
+        comparisonImg: null,
+        slug: "the-explorer",
+        brief: "An adventurer sets sail through cliffs and clouds, where every block tells part of the same story."
+    },
+    {
+        id: 2,
+        name: "Hall of Fame Resort",
+        description: "Located in the marina district of the city, this architectural masterpiece is the focal point of a tropical, lush island. This lavish oasis functions as a luxurious paradise for the elites. It also serves as a tribute to Knighty's Hall of Fame members, with each individual being assigned a golden nameplate, carefully placed onto the walls of the astounding building. The resort complex includes a restaurant, pool, sunbathing areas and tennis courts, all characteristic of an exclusive haven. Whether under the sun or below the moon, the remarkable hyperrealism along with functionality is a tribute to the precision of the building process, down to each block.",
+        buildTime: "20H",
+        size: "345x245x313",
+        year: "2025",
+        imageSrc: "/projects/hall-of-fame-resort.png",
+        srcAlt: "Project",
+        comparison: true,
+        comparisonImg: "/projects/hall-of-fame-resort-night.png",
+        slug: "hall-of-fame-resort",
+        brief: "A tropical landmark built for the elite. Golden nameplates, luxury architecture, and precision down to every block."
+    },
+    {
+        id: 3,
+        name: "MrBeast Secret Lair",
+        description: "This build was featured in, and won, a video on the MrBeast Gaming channel. With a prize money of $15,000, this piece wholly achieved what it set out to accomplish: creating a hidden supervillain lair, concealed within the seemingly inconspicuous mountain. The majestic mansion holds the key, and entrance, to the secret retreat. The redstone-powered evil superbase which lies within contains a myriad of military vehicles and weaponry, such as robots, tanks and fighter jets. In addition, it accommodates factories, a war room, master bedroom, library, suit showroom, and a secret chamber for the most exclusive gear. Built in merely a week, this is truly a testament to Knighty's elaborate and efficient creative process.",
+        buildTime: "50H",
+        size: "350x223x350",
+        year: "2025",
+        imageSrc: "/projects/mrbeast-lair.png",
+        srcAlt: "Project",
+        comparison: true,
+        comparisonImg: "/projects/mrbeast-lair-outside.png",
+        slug: "mrbeast-secret-lair",
+        brief: "The $15K winning supervillain base. A redstone-powered fortress hidden inside a mountain, packed with jets, robots, and gear."
+    },
+    {
+        id: 4,
+        name: "Head in the Clouds",
+        description: "This piece showcases a high level of technical skill and artistic direction, blending storytelling with advanced building techniques. It brings together a wide range of elements, from dynamic organics and intricate lighting to carefully balanced composition, all working in harmony to tell a cohesive visual story. The build showcases a woman who rises gracefully from swirling, otherworldly rings, her form bathed in radiant light and vivid color. It plays creatively with forced light, giving the illusion of shader effects even in vanilla lighting, and demonstrates exceptional control over color, atmosphere, and scale. Every detail reflects precision, patience, and a strong sense of design, resulting in a scene that not only looks beautiful but also conveys depth, emotion, and imagination.",
+        buildTime: "90H",
+        size: "349x368x349",
+        year: "2024",
+        imageSrc: "/projects/head-in-clouds.png",
+        srcAlt: "Project",
+        comparison: false,
+        comparisonImg: null,
+        slug: "head-in-the-clouds",
+        brief: "A woman ascends through swirling rings of light, a sculpted moment that showcases color, detail, and realism."
+    },
+]

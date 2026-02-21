@@ -1,0 +1,114 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.backgroundSlideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.backgroundImage {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 1.5s ease-in-out, transform 8s ease-out;
+}
+
+.backgroundImage.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(
+            ellipse at center,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.3) 60%,
+            rgba(0, 0, 0, 0.6) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.3) 20%,
+            rgba(0, 0, 0, 0.4) 60%,
+            rgba(0, 0, 0, 0.7) 100%
+        );
+    z-index: 2;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: var(--page-padding);
+    padding-bottom: clamp(2.5rem, 6vh, 4rem);
+    
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2.5rem, 5vh, 4rem);
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.tagline {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: white;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding-bottom: 2rem;
+        gap: 2rem;
+    }
+
+    .textContent {
+        gap: 1.25rem;
+    }
+
+    .title {
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+    }
+}
+
+@media (max-width: 520px) {
+    .content {
+        padding: 1.5rem clamp(1rem, 5vw, 1.75rem);
+        gap: 1.75rem;
+    }
+
+    .textContent {
+        gap: 1rem;
+    }
+}

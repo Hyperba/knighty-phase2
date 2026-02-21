@@ -1,0 +1,29 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000;
+  display: grid;
+  place-items: center;
+  pointer-events: all;
+  animation: fadeOut 1s ease forwards;
+}
+
+.logo {
+  width: clamp(72px, 10vw, 110px);
+  height: auto;
+  opacity: 0.95;
+  transform: translateZ(0);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

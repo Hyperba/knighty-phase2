@@ -1,0 +1,154 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem;
+  background: var(--admin-card-bg);
+  border: 2px dashed var(--admin-card-border);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+
+.dropzone:hover,
+.dropzone.active {
+  border-color: var(--admin-accent);
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.dropzone.uploading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.dropzone svg {
+  opacity: 0.5;
+}
+
+.input {
+  display: none;
+}
+
+.hint {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.preview {
+  position: relative;
+  display: inline-block;
+  max-width: 200px;
+}
+
+.previewImage {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 1px solid var(--admin-card-border);
+}
+
+.previewFile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-card-border);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+}
+
+.previewUrl {
+  font-size: 0.8rem;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clearBtn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--admin-danger);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.clearBtn:hover {
+  transform: scale(1.1);
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--admin-danger);
+  margin: 0;
+}
+
+.urlInput {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.orText {
+  font-size: 0.75rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+.urlField {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-card-border);
+  border-radius: 0.5rem;
+  color: var(--heading-color);
+  font-size: 0.8rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.urlField:focus {
+  border-color: var(--admin-accent);
+}
+
+.urlField::placeholder {
+  color: var(--text-color);
+  opacity: 0.4;
+}

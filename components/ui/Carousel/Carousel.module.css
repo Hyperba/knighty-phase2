@@ -1,0 +1,108 @@
+.carouselContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.rem;
+    width: 100%;
+}
+
+.label {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+}
+
+.track {
+    display: flex;
+    gap: 3rem;
+    width: max-content;
+}
+
+.creatorCard {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    padding: 1rem 2rem;
+    transition: transform 0.5s ease;
+}
+
+.creatorCard:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.subscribers {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .label {
+        font-size: 0.8rem;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .name {
+        font-size: 0.875rem;
+    }
+
+    .subscribers {
+        font-size: 0.75rem;
+    }
+
+    .track {
+        gap: 1.5rem;
+    }
+}
